@@ -1,0 +1,359 @@
+/*
+ * Code written in Stylus
+ *   Learn more: http://learnboost.github.io/stylus/
+ */
+
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  box-shadow arguments
+
+@font-face
+  // source: http://www.fontsquirrel.com/fonts/kirsty
+  font-family Kirsty
+  font-weight normal
+  font-style normal
+  src url('fonts/Kirsty.ttf') format('truetype')
+@font-face
+  // source: http://www.fontsquirrel.com/fonts/yataghan
+  font-family Yataghan
+  font-weight normal
+  font-style normal
+  src url('fonts/Yataghan.ttf') format('truetype')
+@font-face
+  // source: http://www.fontsquirrel.com/fonts/lobster
+  font-family Lobster
+  font-weight normal
+  font-style normal
+  src url('fonts/Lobster.otf') format('opentype')
+@font-face
+  // source: http://www.fontsquirrel.com/fonts/quattrocento-sans
+  font-family Quattrocento
+  font-weight normal
+  font-style normal
+  src url('fonts/QuattrocentoSans-Regular.otf') format('opentype')
+@font-face
+  // source: http://www.fontsquirrel.com/fonts/matchbook
+  font-family Matchbook
+  font-weight normal
+  font-style normal
+  src url('fonts/Matchbook.otf') format('opentype')
+@font-face
+  // source: http://www.fontsquirrel.com/fonts/bitstream-vera-sans
+  font-family BitstreamVeraSans
+  font-weight normal
+  font-style normal
+  src url('fonts/BitstreamVeraSans.ttf') format('truetype')
+
+body
+  width 100%
+  height 100%
+  background-color #4e0204
+  background-image url(gfx/tile-red-scratch.jpg)
+  color white
+  text-align center
+  margin 0
+a
+  text-decoration none
+#header
+  h1, h2
+    text-shadow 1px 2px 2px black
+    margin 0
+  h1
+    font-family Kirsty
+    font-size 112px
+    color #00be35
+  h2
+    font-family Yataghan
+    font-size 42px
+    color #00d34c
+    margin-top -10px
+#avatar
+  width 70px
+  border 3px #756e6e solid
+  position fixed
+  top 33px
+  right 15px
+  cursor pointer
+  z-index 9999
+#menu
+  text-align left
+  margin 6px auto
+  position fixed
+  top 132px
+  right 0
+  z-index 9999
+  user-select none
+  div, a
+    color #e0e0e0
+    font-family BitstreamVeraSans
+    font-size 19px
+    padding 6px 12px
+    border-top 1px solid #242424
+    border-right 1px solid #242424
+    border-left 1px solid #1f1e1e
+    border-bottom 1px solid #4d4d4d
+    border-radius 13px 0 0 13px
+    background-color rgba(0, 0, 0, 0.52)
+    display block
+    cursor pointer
+    &:hover
+      color #fafafa
+      background-color rgba(0, 0, 0, 0.3)
+      border-color #777
+@media (max-width: 630px)
+  #avatar, #menu
+    position absolute
+#links
+  box-shadow 0 0 5px rgba(0, 0, 0, 0.6), 0 0 0 1px #000, inset 0 1px 0 rgba(255, 255, 255, 0.2)
+  background linear-gradient(top, #434343, #0D0D0D)
+  padding 6px 6px 6px 3px
+  border-radius 0 8px 8px 0
+  position fixed
+  left 0
+  top 240px
+  margin 0
+  z-index 9999
+  li
+    width 52px
+    height 52px
+    margin 0 2px
+    display block
+    position relative
+    .link-text
+      color #cad0cf
+      text-shadow 3px 2px 2px black
+      font-family Arial
+      font-size 22px
+      white-space nowrap
+      background-color rgba(0, 0, 0, 0.5)
+      padding 2px 11px
+      border-radius 18px
+      position absolute
+      margin-left 40px
+      margin-top 15px
+      opacity 0
+    a
+      width 100%
+      height 100%
+      background-size 100%
+      background-repeat no-repeat
+      display inline-block
+      position absolute
+      left 1px
+      top 1px
+      img
+        width 100%
+        height 100%
+      &:hover
+        width 56px
+        height 56px
+        margin-right 0
+        left 0
+        top 0
+#content
+  position relative
+.page
+  overflow visible
+  position relative
+  > h1
+    color #bec110
+    font-family Lobster
+    font-size 34px
+    text-shadow 3px 4px 4px black
+    margin-top 32px
+    margin-bottom 7px
+.project
+  width 40%
+  max-width 800px
+  min-width 416px
+  padding 20px 0
+  margin auto 1em
+  display inline-block
+  .cover
+    width 100%
+    background-color #343434
+    box-shadow 3px 3px 12px #000
+    border-radius 16px
+    display inline-block
+    transition all 0.16s ease-in-out
+    &:hover
+      box-shadow 0px 2px 31px #aa3d42
+      transform scale(1.006)
+  .info
+    width 100%
+    font-family Quattrocento
+    margin-top 8px
+    white-space nowrap
+    display inline-block
+    vertical-align bottom
+    a
+      color #888888
+      &:hover
+        color #ddd
+    p
+      margin 4px auto
+    hr
+      width 12px
+      border-color #333
+      margin 2px auto
+    .name
+      color #ddd
+      font-family Quattrocento
+      font-weight normal
+      font-size 38px
+      text-shadow 2px 1px 2px #090909
+      margin 8px auto
+    .type
+      color white
+      font-family Matchbook
+      font-size 32px
+      text-shadow 1px 1px 2px black
+    .job
+      color #4ce21d
+      font-size 20px
+      &:before
+        content '» '
+      &:after
+        content ' «'
+    .credits
+      color #9effd1
+      font-size 18px
+@media (max-width: 903px)
+  .project
+    width 74%
+    max-width auto
+    min-width 0
+    .info
+      white-space normal
+#contact
+  max-width 600px
+  margin 0 auto
+  padding-left 80px
+  padding-right 80px
+  padding-bottom 20px
+  form
+    margin-top 24px
+    margin-bottom 10px
+  label
+    color #d6c0c0
+    font 16px/1.8 Arial, sans-serif
+    text-shadow 2px 2px 1px black
+    margin-top 12px
+    display block
+  @media (min-width: 500px)
+    .group > label
+      width 49%
+      &:first-child
+        float left
+      &:last-child
+        float right
+  textarea
+    height 190px
+    resize vertical
+  #submit
+    margin 0 auto
+    &.error
+      color white
+      background-color red
+  #success
+    font-size 19px
+    margin-top -3px
+    margin-bottom 20px
+    display none
+  input:not([type="submit"]),
+  select
+    height 44px
+    display block
+    margin 0 auto
+  input:not([type="submit"]),
+  select,
+  textarea
+    width 100%
+    color #a9a9a9
+    font-family Quattrocento
+    font-size 20px
+    background #3d3d3d
+    border 1px solid #10100f
+    box-shadow 3px 4px 16px rgba(0, 0, 0, 0.8)
+    padding 12px
+    box-sizing border-box // Prevent padding from widening the box: http://stackoverflow.com/q/16388361
+    margin-bottom 5px
+    &:focus
+      background #424242
+      outline none
+  select
+    // Custom styling the select box
+    -webkit-appearance none
+    // Trick to remove arrow glyph in Firefox: https://gist.github.com/joaocunha/6273016
+    text-indent 0.01px
+    text-overflow ''
+    &:-moz-focusring
+      // Trick to remove dotted inner box in Firefox
+      color transparent
+      text-shadow 0 0 0 #a9a9a9
+    @media (max-width: 480px)
+      width 100%
+  #submit
+    background-color #62635e
+    color #fff
+    font-size 16px
+    border none
+    border-radius 8px
+    padding 9px 14px
+    margin-top 6px
+    display block
+    cursor pointer
+    &:hover
+      color #000
+      background #b1b1b1
+    &:focus
+      background-color #767773
+      outline none
+#logos
+  img
+    margin 0 8px
+    opacity 0.9
+    &:hover
+      opacity 1
+#copyright
+  color #bebbbb
+  font-family Quattrocento
+  margin 0
+  padding 16px 0
+#info-window
+  min-height 10px
+  background #5e5e5e
+  background-image url(gfx/tile-brushed-metal.png)
+  color #bebebe
+  font-family BitstreamVeraSans
+  text-align left
+  border 1px solid #4d4d4d
+  border-radius 20px
+  box-shadow 6px 7px 8px rgba(0, 0, 0, 0.8)
+  padding 21px 16px
+  .close
+    width 24px
+    height 24px
+    position absolute
+    top 9px
+    right 4px
+    color #8f8f8f
+    cursor pointer
+    display block
+    &:hover
+      color #ececec
+  strong, a
+    color #ececec
+  a
+    text-decoration none
+    &:hover
+      color #ff6161
