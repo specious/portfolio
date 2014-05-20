@@ -7,7 +7,7 @@ mixin item(name, type, job, credits, cover, url, lazy)
   .project
     a(href=url, target='_blank')
       if lazy
-        img.cover(src='gfx/cover-placeholder.jpg', data-src='gfx/gallery/'+cover, alt=name)
+        img.cover.lazy(src='gfx/cover-placeholder.jpg', data-src='gfx/gallery/'+cover, alt=name)
         noscript
           img.cover(src='gfx/gallery/'+cover, alt=name)
       else
@@ -97,6 +97,9 @@ html(lang='en')
           img(src='gfx/logos/css3.png', alt='CSS3')
       p#copyright
         | Designed and programmed by Ildar Sagdejev &copy; 2014
+    noscript
+      style.
+        .lazy { visibility: hidden; height: 0; }
     script(src='js/lib/jquery.js')
     script(src='js/lib/zoomerang.js')
     script(src='js/infowin.js')
