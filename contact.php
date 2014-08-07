@@ -1,5 +1,4 @@
 <?php
-require( 'config.php' );
 
 if( !isset($_POST) )
   die( 'Quit hacking!' );
@@ -46,7 +45,7 @@ if( empty($message) ) {
 }
 
 if( $valid ) {
-  $headers = 'From: ' . $contact['email']['from'] . "\r\n" .
+  $headers = 'From: hire.webninja.io <noreply@hire.webninja.io>\r\n" .
              'Content-type: text/html; charset=UTF-8' . "\r\n";
 
   $emailbody = <<<EOM
@@ -62,7 +61,7 @@ if( $valid ) {
 </div>
 EOM;
 
-  mail( $contact['email']['to'], 'Web enquiry', $emailbody, $headers );
+  mail( 'specious@gmail.com', 'Web enquiry', $emailbody, $headers );
 }
 
 //
