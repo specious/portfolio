@@ -45,8 +45,8 @@ if( empty($message) ) {
 }
 
 if( $valid ) {
-  $headers = 'From: hire.webninja.io <noreply@hire.webninja.io>\r\n" .
-             'Content-type: text/html; charset=UTF-8' . "\r\n";
+  $headers = "From: hire.webninja.io <noreply@hire.webninja.io>\r\n" .
+             "Content-type: text/html; charset=UTF-8\r\n";
 
   $emailbody = <<<EOM
 <p>You have recieved a new message from the enquiries form on your website.</p>
