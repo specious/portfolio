@@ -7,11 +7,11 @@ mixin item(name, type, job, credits, cover, url, lazy)
   .project
     a(href=url, target='_blank')
       if lazy
-        img.cover.lazy(src='gfx/cover-placeholder.jpg', data-src='gfx/gallery/'+cover, alt=name)
+        img.cover.lazy(src='gfx/cover-placeholder.jpg', data-src='gfx/thumbs/'+cover, alt=name)
         noscript
-          img.cover(src='gfx/gallery/'+cover, alt=name)
+          img.cover(src='gfx/thumbs/'+cover, alt=name)
       else
-        img.cover(src='gfx/gallery/'+cover, alt=name)
+        img.cover(src='gfx/thumbs/'+cover, alt=name)
     .info
       p.name= name
       p.type= type
