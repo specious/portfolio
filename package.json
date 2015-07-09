@@ -1,0 +1,25 @@
+{
+  "name": "specious-portfolio",
+  "version": "1.0.1",
+  "description": "Ildar Sagdejev's freelance portfolio",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-stylus": "^2.0.5",
+    "nib": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/specious/portfolio.git"
+  },
+  "author": "Ildar Sagdejev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/specious/portfolio/issues"
+  },
+  "homepage": "https://github.com/specious/portfolio"
+}
