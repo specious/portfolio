@@ -1,6 +1,6 @@
 {
   "name": "specious-portfolio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ildar Sagdejev's freelance portfolio",
   "main": "index.html",
   "devDependencies": {

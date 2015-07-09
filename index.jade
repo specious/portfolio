@@ -35,8 +35,8 @@ html(lang='en')
         | Websites
       a(href='#games')
         | Games
-      a#hire(href='#contact')
-        | Hire me!
+      a#lets-talk(href='#contact')
+        | Let's talk
     #header
       h1 Ildar Sagdejev
       h2 Web Ninja For Hire
@@ -49,9 +49,9 @@ html(lang='en')
     #content
       #websites.page
         h1 Recent websites
-        +item("Julemagne.com", "Website - Fine art", "Custom website", "Art and graphics by <a href='http://twitter.com/julemagne' target='_blank'>Julie David</a>", "websites/julemagne.png", "http://www.julemagne.com/")
+        +item("Julemagne.com", "Website - Fine art", "Custom website", "Art and graphics by <a href='http://twitter.com/julemagne' target='_blank'>Julie David</a>", "websites/julemagne.png", "demos/julemagne/")
         +item("Blue Stingray", "Website - Seafood restaurant", "Custom WordPress", "Delicious seafood by Vinh and Yen", "websites/blue-stingray.png", "http://www.bluestingrayseafood.com/menu/seafood/")
-        +item("Professional Mortuary", "Website - Funeral service", "Custom website", "Embalming by <a href='http://www.promortuary.com/' target='_blank'> William Lum</a>", "websites/pms-nc.png", "http://www.promortuary.com/")
+        +item("Professional Mortuary", "Website - Funeral service", "Custom website", "Embalming by <a href='http://www.promortuary.com/' target='_blank'> William Lum</a>", "websites/pms-nc.png", "demos/promortuary/")
       #games.page
         h1 Sweepstakes games
         +item("Wheel Deal", "Game of chance", "Programming", "Graphics by Figure 8 Technologies", "games/wheel-deal.png", "gfx/gallery/games/wheel-deal.png", true)
@@ -62,32 +62,8 @@ html(lang='en')
         +item("American Pride", "Game of chance", "Programming", "Graphics by Figure 8 Technologies", "games/pride.png", "gfx/gallery/games/pride.png", true)
         +item("Deuces Wild", "Game of chance", "Programming", "Graphics by Figure 8 Technologies", "games/deuces-wild.png", "gfx/gallery/games/deuces-wild.png", true)
       #contact.page
-        h1 Hire me!
-        form(action='contact.php', method='post')
-          label
-            | Your name
-            input#name(type='text', name='name', required='')
-          label
-            | Your e-mail
-            input(type='email', name='email', required='')
-          .group
-            label
-              | Budget
-              input(type='text', name='budget', placeholder='e.g., $3500')
-            label
-              | Start date
-              select(name='start')
-                option(value='1') Within 1 month
-                option(value='1-2', selected='') 1 - 2 months
-                option(value='2-3') 2 - 3 months
-                option(value='3+') 3+ months
-          div(style='clear: both')
-          label
-            | What can I help you with?
-            textarea(name='message', required='')
-          input#submit(type='submit', value='Submit')
-        #success
-          | Thanks for your message! I will get back to you soon.
+        h1 Let's talk
+        h2 Drop me an e-mail at: <a href="mailto:specious@gmail.com">specious@gmail.com</a>
     div
       #logos
         a(href='http://jquery.com/', target='_blank')
@@ -97,14 +73,13 @@ html(lang='en')
         a(href='http://css3please.com/', target='_blank')
           img(src='gfx/logos/css3.png', alt='CSS3')
       p#copyright
-        | Designed and programmed by Ildar Sagdejev &copy; 2014
+        | Designed and programmed by Ildar Sagdejev &copy; 2015
     noscript
       style.
         .lazy { visibility: hidden; height: 0; }
     script(src='js/lib/jquery.js')
     script(src='js/lib/zoomerang.js')
     script(src='js/infowin.js')
-    script(src='js/contact.js')
     script.
       $(function() {
         function scrollTo( selector, time ) {
@@ -120,12 +95,10 @@ html(lang='en')
           scrollTo( $(this).attr('href') )
           return false
         } )
-        $('#hire').click( function() {
+        $('#contact').click( function() {
           $('#name').focus()
           return false
         } )
-
-        contactFormEnable( $('#contact') )
 
         $('#links li').each( function() {
           var link = $(this).children('a')
