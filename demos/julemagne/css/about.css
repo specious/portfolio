@@ -1,0 +1,35 @@
+@font-face {
+  /* source: http://www.fontsquirrel.com/fonts/kaushan-script */
+  font-family: 'KaushanScriptRegular';
+  src: url('../fonts/KaushanScript-Regular-webfont.eot');
+  src: url('../fonts/KaushanScript-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/KaushanScript-Regular-webfont.woff') format('woff'),
+       url('../fonts/KaushanScript-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/KaushanScript-Regular-webfont.svg#KaushanScriptRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#bio {
+  width: 100%;
+  margin-right: 19px;
+  text-align: justify;
+}
+#bio a {
+  font-weight: bold;
+}
+#bio h1 {
+  color: black;
+  font-family: 'KaushanScriptRegular';
+  font-size: 26px;
+  font-weight: normal;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+  margin-left: -0.134em; /* correct for font letter drift */
+}
+#bio h2 {
+  color: black;
+  font: 14px/1.5 Arial,sans-serif;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}

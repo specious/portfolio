@@ -1,0 +1,118 @@
+/*
+ * Contact form style
+ */
+
+#contact-form {
+  width: 100%;
+  min-width: 260px;
+}
+#contact-form h1 {
+  color: black;
+  font-family: 'KaushanScriptRegular';
+  font-size: 26px;
+  font-weight: normal;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+  margin-left: -0.134em; /* correct for font letter drift */
+}
+#contact-form h2 {
+  color: black;
+  font: 14px/1.5 Arial,sans-serif;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+#contact-form label {
+  font: 12px/1.5 Arial,sans-serif;
+  color: black;
+  font-size: 12px;
+}
+#contact-form input:not([type="submit"]),
+#contact-form select,
+#contact-form textarea {
+  width: 98%;
+  background: #b89a2e; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffe175 0%, #fcd755 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffe175), color-stop(100%,#fcd755)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffe175 0%, #fcd755 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffe175 0%, #fcd755 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffe175 0%, #fcd755 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffe175 0%, #fcd755 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe175', endColorstr='#fcd755', GradientType=0 ); /* IE6-9 */
+  border: 1px solid #10100f;
+  font-size: 12px;
+  margin-bottom: 5px;
+  padding: 4px;
+}
+#contact-form select {
+  width: 102%; /* override */
+}
+#contact-form select option {
+  background-color: #ffe999;
+}
+#contact-form input:not([type="submit"]):focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+  background: #b89a2e; /* Old browsers */
+  background: -moz-linear-gradient(top, #fce064 0%, #fcd755 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fce064), color-stop(100%,#fcd755)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fce064 0%, #fcd755 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fce064 0%, #fcd755 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fce064 0%, #fcd755 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #fce064 0%, #fcd755 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fce064', endColorstr='#fcd755', GradientType=0 ); /* IE6-9 */
+  border: 1px solid #504211;
+}
+#contact-form textarea {
+  height: 91px;
+  resize: none;
+}
+#contact-form label {
+  display: block;
+}
+#contact-form #submit.error {
+  color: white;
+  background-color: red;
+}
+#contact-form #success {
+  text-align: center;
+  display: none;
+}
+#contact-form #success #text {
+  color: black;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+#contact-form #success img {
+  margin-top: 0.6em;
+  display: inline-block;
+}
+#contact-form input:required,
+#contact-form textarea:required {
+  /* let required fields go incognito */
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+#contact-form ::-webkit-input-placeholder {
+  color: #c5a11b;
+  font-style: italic;
+}
+#contact-form input:focus::-webkit-input-placeholder {
+  color: #9a8128;
+}
+#contact-form ::-moz-placeholder { /* Firefox 4-18 */
+  color: #494022;
+  font-style: italic;
+}
+#contact-form :-moz-placeholder { /* Firefox 19+ */
+  color: #494022;
+  font-style: italic;
+}
+#contact-form :-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #494022;
+  font-style: italic;
+}

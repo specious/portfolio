@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/contact.css">
+<div id="contact-form">
+  <h1>Get In Touch!</h1>
+  <h2>Give me a shout! I will reply to you shortly.</h2>
+  <form action="contact.php" method="post">
+    <label for="enquiry">Enquiry:</label>
+    <select id="enquiry" name="enquiry">
+      <option value="hire">I want to hire you</option>
+      <option value="price">I'd like to ask the price for a painting</option>
+      <option value="thank">I want to thank you</option>
+    </select>
+    <label>Name:
+      <input type="text" id="name" name="name" placeholder="Paul Cézanne" required autofocus>
+    </label>
+    <label>Email Address:
+      <input type="email" name="email" placeholder="cezanne@example.com" required>
+    </label>
+    <label>Message:
+      <textarea name="message" required></textarea>
+    </label>
+    <input type="submit" id="submit" class="form-button" value="Send">
+  </form>
+  <div id="success">
+    <p id="text">Thanks for your message! Julemagne will get back to you ASAP!</p>
+    <img src="gfx/art/thumbs/what-would-rembrandt-do.png" alt="Julemagne">
+  </div>
+</div>
